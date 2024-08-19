@@ -6,7 +6,8 @@ import unittest
 
 from enum import Enum
 
-# Use these to distinguish node types
+# Use these to distinguish node types, note that you might want to further
+# distinguish between the addition and multiplication operators
 NodeType = Enum('BinOpNodeType', ['number', 'operator'])
 
 class BinOpAst():
@@ -82,6 +83,7 @@ class BinOpAst():
         Reduce additive identities
         x + 0 = x
         """
+        # IMPLEMENT ME!
         pass
                         
     def multiplicative_identity(self):
@@ -89,6 +91,7 @@ class BinOpAst():
         Reduce multiplicative identities
         x * 1 = x
         """
+        # IMPLEMENT ME!
         pass
     
     
@@ -97,6 +100,7 @@ class BinOpAst():
         Reduce multiplication by zero
         x * 0 = 0
         """
+        # Optionally, IMPLEMENT ME! (I'm pretty easy)
         pass
     
     def constant_fold(self):
@@ -105,6 +109,9 @@ class BinOpAst():
         e.g. 1 + 2 = 3
         e.g. x + 2 = x + 2
         """
+        # Optionally, IMPLEMENT ME! This is a bit more challenging. 
+        # You also likely want to add an additional node type to your AST
+        # to represent identifiers.
         pass            
 
     def simplify_binops(self):
